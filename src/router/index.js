@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import two from '@/components/two'
 import three from '@/components/three'
-// import four from '@/components/four'
+import bb from '@/components/bb'
 // import five from '@/components/five'
 // import six from '@/components/six'
 // import seven from '@/components/seven'
@@ -29,11 +29,11 @@ export default new Router({
       name:'three',
       component: three
     },
-    // {
-    //   path:'/four',
-    //   name:'four',
-    //   component: HelloWorld
-    // },
+    {
+      path:'/bb',
+      name:'bb',
+      component: bb
+    },
     // {
     //   path:'/five',
     //   name:'five',

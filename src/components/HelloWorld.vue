@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="right">
+    <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -85,7 +85,6 @@
       </li>
     </ul>
   </div>
-  </div>
 </template>
 
 <script>
@@ -116,8 +115,8 @@ li {
 a {
   color: #42b983;
 }
-  .right {
-    width:50%;
+  .hello {
+    width:90%;
     float: right;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>222222222222</div>
+  <div class="two">222222222222</div>
 </template>
 <script>
   export default {
@@ -7,7 +7,7 @@
   }
 </script>
 <style>
-  div{
+  .two{
     color: red;
   }
 </style>
