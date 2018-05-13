@@ -3,6 +3,14 @@
   <div id="animated-number-demo">
     <input v-model.number="number" type="number" step="20">
     <p>{{ animatedNumber }}</p>
+    <button @click="target()">切换</button>
+    <div class="a" v-bind:style="{height:hei}">
+      <ul>
+        <li>sd</li>
+        <li>sd</li>
+        <li>fsd</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -32,7 +40,9 @@
     data(){
       return {
         number: 0,
-        tweenedNumber: 0
+        tweenedNumber: 0,
+        flag:-1,
+        hei:'auto'
       }
     },
     computed: {
@@ -40,14 +50,28 @@
         return this.tweenedNumber.toFixed(0);
       }
     },
+    methods:{
+      target:function () {
+        this.flag*=-1;
+        if(this.flag==1){
+          this.hei='200px'
+        }else{
+          this.hei='0'
+        }
+      }
+    },
     watch: {
       number: function(newValue) {
-        console.log(this)
         TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue });
+      },
+      hei:function (newValue) {
+        TweenLite.to(this.$data, 5, { hei: newValue })
       }
     }
   }
 </script>
 <style>
-
+.a{
+  overflow: hidden;
+}
 </style>
